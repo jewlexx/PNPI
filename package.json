@@ -9,7 +9,8 @@
     "fmt": "prettier --write src/**/*",
     "lint": "eslint src/**/*",
     "lint:fix": "eslint src/**/* --fix",
-    "test": "ts-node ./tests/test.ts"
+    "test": "set DEBUG=true && ts-node ./tests/index.ts",
+    "test:stress": "set DEBUG=true && ts-node ./tests/stress.ts"
   },
   "devDependencies": {
     "@types/node": "^16.7.6",
@@ -26,6 +27,5 @@
     "prettier": "^2.3.2",
     "ts-node": "^10.2.1",
     "typescript": "4.3.5"
-  },
-  "packageManager": "yarn@3.0.1"
+  }
 }
