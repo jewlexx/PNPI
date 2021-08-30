@@ -152,10 +152,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.7.4":
-  version: 16.7.4
-  resolution: "@types/node@npm:16.7.4"
-  checksum: da7813e6c37e7813645a9d40de6d9f803fbadb2975748d307ec31d8e4f9baabccf49b667a39e4b1288d477ec7d34a339e8a41d8703a1d7ab0ec8eb2516073f27
+"@types/node@npm:^16.7.6":
+  version: 16.7.6
+  resolution: "@types/node@npm:16.7.6"
+  checksum: a8533386a1d4ca0ed67885413001af8789c63948df288f3d36e31bd8fccffacf5dffb95e190c8cd57bb40385f010fb9a30f596bad6bb26b2bb88737d54d8ed95
   languageName: node
   linkType: hard
 
@@ -1769,7 +1769,7 @@ eslint-config-standard@latest:
   version: 0.0.0-use.local
   resolution: "pnpi@workspace:."
   dependencies:
-    "@types/node": ^16.7.4
+    "@types/node": ^16.7.6
     "@typescript-eslint/eslint-plugin": ^4.29.3
     "@typescript-eslint/parser": ^4.29.3
     eslint: ^7.32.0
