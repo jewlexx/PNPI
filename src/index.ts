@@ -29,6 +29,8 @@ export default class PNPI {
       if (this.options.log) {
         operation.stdout.pipe(process.stdout);
         operation.stderr.pipe(process.stderr);
+        operation.stdin.pipe(process.stdin);
+        process.stdin.pipe(operation.stdin);
       }
 
       operation.stderr.on('data', data => {
