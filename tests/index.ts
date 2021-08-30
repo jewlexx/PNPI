@@ -20,7 +20,8 @@ async function installTest() {
 
   await npm.init();
 
-  await npm.install(['abbie', 'createignore']);
+  await npm.install(['abbie']);
+  await npm.install('createignore', '--save-dev');
   console.log('Installed packages');
 
   await wait(1000);

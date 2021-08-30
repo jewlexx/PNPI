@@ -58,15 +58,24 @@ export default class PNPI {
     return this.run('init', '-y');
   }
 
-  public async install(packages: string | string[]): Promise<void> {
+  public async install(
+    packages: string | string[],
+    save:
+      | '--save'
+      | '--save-dev'
+      | '--save-prod'
+      | '--save-exact'
+      | '--save-bundle'
+      | '--dry-run' = '--save',
+  ): Promise<void> {
     if (typeof packages === 'string') {
-      return this.installPackages([packages]);
+      return this.installPackages([packages, save]);
     }
-    return this.installPackages(packages);
+    return this.installPackages([...packages, save]);
   }
 
-  private installPackages(packages: string[]): Promise<void> {
-    return this.run(this.installCmd, ...packages);
+  private installPackages(args: string[]): Promise<void> {
+    return this.run(this.installCmd, ...args);
   }
 
   public async remove(packages: string[]): Promise<void> {
